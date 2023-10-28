@@ -1,10 +1,185 @@
+.wrap {
+  background-color: $color-primary;
+  @include respond(phone) {
+    background-color: red;
+  }
+}
+
 .navigation {
+  width: min(95vw, 150rem);
+  margin: 0 auto;
+  padding-block: 3rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    a {
+      color: inherit;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    &-button {
+      position: relative;
+      height: 5rem;
+      width: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      display: none;
+
+      @include respond(phone) {
+        display: flex;
+        z-index: 1000;
+      }
+    }
+
+    &-icon {
+      width: 5rem;
+      transition: background-color 300ms ease;
+
+      &,
+      &::after,
+      &::before {
+        display: inline-block;
+        height: 3px;
+        background-color: $color-black;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        transition: 300ms ease;
+        transition-property: top, bottom, transform;
+      }
+
+      &::before {
+        top: 25%;
+      }
+
+      &::after {
+        bottom: 25%;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include respond(phone) {
+      padding-top: 10rem;
+      height: 100%;
+      width: 50%;
+      align-items: unset;
+      flex-direction: column;
+      background-color: $color-sub-secondary;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      transform: translateX(-100%);
+      transition: 300ms ease;
+      transition-property: transform;
+    }
+
+    &__background {
+      display: none;
+
+      @include respond(phone) {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 300ms ease, visibility 0ms ease 0ms;
+      }
+    }
+  }
+
+  &__item {
+    list-style: none;
+
+    @include respond(phone) {
+      padding: 3rem 3rem 3rem 0rem;
+    }
+  }
+
+  &__anchor {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: inherit;
+    position: relative;
+    padding: 0rem 3rem;
+
+    @include respond(phone) {
+      font-size: 4rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4.5rem;
+      height: 4px;
+      width: 100%;
+      left: 0;
+      background-color: $color-hover;
+      transition: 0.3s;
+      transition-timing-function: ease-in-out;
+      transform: scaleX(0);
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &__anchor:hover::after {
+    transform: scaleX(1);
+  }
 
   &__action {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+
     img {
-      width: 5rem;
-      height: 5rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+
+    .activity {
+      position: absolute;
+      top: -0.5rem;
+      margin-left: 1.5rem;
+      span {
+        background-color: $color-secondary;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
