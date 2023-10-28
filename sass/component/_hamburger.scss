@@ -1,0 +1,26 @@
+#checkbox {
+  display: none;
+
+  &:checked + .navigation__logo .navigation__logo-icon {
+    background-color: transparent;
+  }
+
+  &:checked + .navigation__logo .navigation__logo-icon::before {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+
+  &:checked + .navigation__logo .navigation__logo-icon::after {
+    transform: rotate(45deg);
+    bottom: 40%;
+  }
+
+  &:checked ~ .navigation__list {
+    transform: translateX(0%);
+  }
+
+  &:checked ~ .navigation__list__background {
+    opacity: 1;
+    visibility: visible;
+  }
+}
