@@ -1,8 +1,5 @@
 .wrap {
   background-color: $color-primary;
-  @include respond(phone) {
-    background-color: red;
-  }
 }
 
 .navigation {
@@ -19,6 +16,10 @@
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
 
     a {
       color: inherit;
@@ -130,7 +131,7 @@
     padding: 0rem 3rem;
 
     @include respond(phone) {
-      font-size: 4rem;
+      font-size: 2.5rem;
     }
 
     &::after {
@@ -165,20 +166,26 @@
       width: 2rem;
       height: 2rem;
       cursor: pointer;
+
+      @include respond(phone) {
+        width: 3rem;
+        height: 3rem;
+      }
     }
 
     .activity {
       position: absolute;
-      top: -0.5rem;
+      top: -1rem;
       margin-left: 1.5rem;
       span {
         background-color: $color-secondary;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 2rem;
+        width: 2rem;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 2rem;
       }
     }
   }
