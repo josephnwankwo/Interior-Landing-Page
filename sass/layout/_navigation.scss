@@ -44,7 +44,7 @@
     }
 
     &-icon {
-      width: 5rem;
+      width: 4rem;
       transition: background-color 300ms ease;
 
       &,
@@ -59,8 +59,8 @@
       &::before {
         content: "";
         position: absolute;
-        width: 100%;
-        left: 0;
+        width: 3rem;
+        left: 20%;
         transition: 300ms ease;
         transition-property: top, bottom, transform;
       }
