@@ -1,0 +1,18 @@
+.header {
+  padding-block: 6rem;
+  &-top {
+    text-align: center;
+
+    p {
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    h1 {
+      margin-bottom: 4rem;
+      span {
+        color: $color-grey;
+      }
+    }
+  }
+}
