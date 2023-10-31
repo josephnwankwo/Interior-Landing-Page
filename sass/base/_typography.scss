@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "rische";
+  src: url(/asset/font/rische.otf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/asset/font/Roboto.ttf);
+}
+
+@font-face {
+  font-family: "maghony";
+  src: url(/asset/font/maghony.ttf);
+}
+
+.paragraph {
+  font-size: 1.8rem;
+}
+
+.heading-primary {
+  width: min(70vw, 135rem);
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: "maghony", serif;
+
+  @include respond(tab-land) {
+    width: min(75vw, 100rem);
+    font-size: 6.5rem;
+  }
+
+  @include respond(tab-port) {
+    width: min(80vw, 120rem);
+    font-size: 6rem;
+  }
+
+  @include respond(tab-port) {
+    width: min(90vw, 135rem);
+    font-size: 5rem;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  background-color: $color-secondary;
+  color: inherit;
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 1.5rem 3rem;
+  border-radius: 1.5rem;
+
+  @include respond(tab-land) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
