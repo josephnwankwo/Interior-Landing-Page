@@ -41,7 +41,13 @@
   }
 }
 
-.btn {
+.heading-secondary {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 5rem;
+}
+
+.btn-lemon {
   text-decoration: none;
   background-color: $color-secondary;
   color: inherit;
@@ -57,4 +63,23 @@
   @include respond(phone) {
     font-size: 2rem;
   }
+}
+
+.btn-white {
+  text-decoration: none;
+  background-color: $color-white;
+  color: inherit;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1.2rem 6rem;
+  border-radius: 1.5rem;
+}
+
+.btn-text {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1.5rem 3.5rem;
+  outline: 0.1rem solid $color-black;
 }
