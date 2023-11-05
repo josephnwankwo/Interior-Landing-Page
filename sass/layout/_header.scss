@@ -47,7 +47,7 @@
           z-index: 1;
 
           &::before {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             top: 50%;
@@ -58,7 +58,12 @@
             border-radius: 50%;
             z-index: -1;
             backdrop-filter: blur(3px);
-            background-image: radial-gradient(#ffffff6f, #ffffff92, transparent, transparent);
+            background-image: radial-gradient(
+              #ffffff6f,
+              #ffffff92,
+              transparent,
+              transparent
+            );
           }
         }
       }
@@ -136,7 +141,7 @@
     // display: flex;
     // justify-content: center;
     // align-items: stretch;
-    
+
     .offers {
       // height: 100%;
       // width: 100%;
