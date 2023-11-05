@@ -150,12 +150,12 @@
       .top {
         color: $color-white;
         background-color: $color-black;
-        transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg) scale(1.1);
       }
 
       .bottom {
         background-color: $color-secondary;
-        transform: rotate(2.5deg);
+        transform: rotate(2.5deg) scale(1.1);
       }
 
       .offer {
