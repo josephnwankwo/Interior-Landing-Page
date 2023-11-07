@@ -1,4 +1,5 @@
 .header {
+  padding-bottom: 15rem;
   &-top {
     text-align: center;
     padding-block: 6rem;
@@ -72,7 +73,7 @@
         border-radius: 3rem;
       }
 
-      h2 {
+      h3 {
         margin-bottom: 4rem;
       }
     }
@@ -136,17 +137,8 @@
   &-foot {
     position: relative;
     pointer-events: none;
-    // overflow-x: hidden;
-    // height: 10rem;
-    // display: flex;
-    // justify-content: center;
-    // align-items: stretch;
 
     .offers {
-      // height: 100%;
-      // width: 100%;
-      // transform: scale(1.1);
-
       .top {
         color: $color-white;
         background-color: $color-black;
