@@ -8,9 +8,25 @@
     justify-content: space-between;
     gap: 5rem;
 
-    img {
+    @include respond(tab-land) {
+      gap: 3rem;
+    }
+
+    @include respond(tab-port) {
+      gap: 2rem;
+      flex-direction: column;
+    }
+
+    .item {
       width: 45rem;
       height: 40rem;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+
+    img {
       object-fit: cover;
     }
 
@@ -24,101 +40,259 @@
 
     .text-info {
       background-color: $color-sub-secondary;
-      flex: 1;
-      padding: 8rem 3rem;
+      padding: 0rem 3rem;
       border-radius: 0rem 8rem 0rem 8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include respond(phone) {
+        text-align: center;
+      }
 
       h4 {
         margin-bottom: 5rem;
+
+        @include respond(tab-land) {
+          margin-bottom: 2rem;
+        }
       }
     }
   }
-}
 
-.guarantee {
-  width: min(100vw, 150rem);
-  margin: 0 auto;
-  padding-bottom: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .guarantee {
+    width: min(100vw, 150rem);
+    margin: 0 auto;
+    padding-bottom: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  img {
-    width: 100rem;
-    height: 60rem;
-    object-fit: cover;
-    border-radius: 5rem 0rem 5rem 5rem;
+    @include respond(tab-port) {
+      gap: 10rem;
+      flex-direction: column;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    img {
+      width: 100rem;
+      height: 60rem;
+      object-fit: cover;
+      border-radius: 5rem 0rem 5rem 5rem;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      @include respond(phone) {
+        height: 40rem;
+      }
+    }
+
+    .comfort {
+      padding-inline: 5rem;
+
+      h2 {
+        margin-bottom: 3rem;
+      }
+
+      p {
+        width: 80%;
+        margin-bottom: 8rem;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+    }
   }
 
-  .comfort {
-    padding-inline: 5rem;
+  .interior-designs {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+    display: flex;
+    gap: 2rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 40rem;
+      object-fit: cover;
+      flex: 1;
+
+      @include respond(phone) {
+        height: 0rem;
+      }
+    }
+
+    #inte-1 {
+      width: 20rem;
+      border-radius: 0rem 2.5rem 2.5rem 0rem;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+
+    #inte-2 {
+      border-radius: 6rem 0rem 6rem 0rem;
+      flex: 1;
+
+      @include respond(tab-land) {
+        display: none;
+      }
+    }
+
+    #inte-3 {
+      width: 25rem;
+      border-radius: 2.5rem;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+
+    #inte-4 {
+      width: 25rem;
+      border-radius: 2.5rem;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+
+    #inte-5 {
+      width: 20rem;
+      border-radius: 2.5rem;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+
+  .master-piece {
+    background-color: $color-sub-secondary;
+    border-radius: 5rem 5rem 0rem 0rem;
 
     h2 {
-      margin-bottom: 3rem;
-    }
-
-    p {
+      padding-block: 10rem;
       width: 80%;
-      margin-bottom: 8rem;
+      margin: 0 auto;
+      text-align: center;
+
+      @include respond(phone) {
+        width: 90%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 60rem;
+      object-fit: cover;
+      padding-bottom: 5rem;
+      border-radius: 5rem 5rem 0rem 0rem;
+      outline: 0.3rem $color-white solid;
     }
   }
-}
 
-.interior-designs {
-  width: min(100vw, 150rem);
-  margin: 0 auto;
-  padding-bottom: 10rem;
-  display: flex;
-  gap: 2rem;
-
-  img {
-    height: 40rem;
-    object-fit: cover;
-  }
-
-  #inte-1 {
-    width: 20rem;
-    border-radius: 0rem 2.5rem 2.5rem 0rem;
-  }
-
-  #inte-2 {
-    border-radius: 6rem 0rem 6rem 0rem;
-    flex: 1;
-  }
-
-  #inte-3 {
-    width: 25rem;
-    border-radius: 2.5rem;
-  }
-
-  #inte-4 {
-    width: 25rem;
-    border-radius: 2.5rem;
-  }
-
-  #inte-5 {
-    width: 20rem;
-    border-radius: 2.5rem;
-  }
-}
-
-.master-piece {
-  background-color: $color-sub-secondary;
-  border-radius: 5rem 5rem 0rem 0rem;
-
-  h2 {
+  .more-perspectives {
     padding-block: 10rem;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
 
-  img {
-    width: 100%;
-    height: 60rem;
-    object-fit: cover;
-    padding-bottom: 5rem;
-    border-radius: 5rem 5rem 0rem 0rem;
-    outline: 0.3rem $color-white solid;
+    h2 {
+      text-align: center;
+      width: 85%;
+      margin: 0 auto;
+      margin-bottom: 10rem;
+
+      @include respond(phone) {
+        width: 90%;
+      }
+
+      span {
+        color: $color-secondary;
+      }
+    }
+
+    .images {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+
+      @include respond(tab-land) {
+        gap: 2rem;
+      }
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+
+      img {
+        width: 100%;
+        height: 40rem;
+        object-fit: cover;
+        flex: 1;
+        border-radius: 3rem;
+        transform: skewy(-8deg);
+
+        @include respond(phone) {
+          transform: unset;
+          flex: unset;
+        }
+      }
+
+      .inte-2 {
+        @include respond(tab-land) {
+          display: none;
+        }
+      }
+
+      .inte-4 {
+        @include respond(tab-land) {
+          display: none;
+        }
+      }
+    }
+
+    .arrows {
+      padding-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+      }
+
+      :nth-of-type(1) {
+        color: $color-white;
+        background-color: $color-sub-secondary;
+      }
+
+      :nth-of-type(2) {
+        color: $color-primary;
+        outline: 0.2rem $color-primary solid;
+      }
+    }
   }
 }
