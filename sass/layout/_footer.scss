@@ -1,0 +1,73 @@
+footer {
+  .footer {
+    padding-inline: 8vw;
+    background-color: $color-tertiary;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 10rem 3rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+
+    :nth-of-type(1) {
+      flex: 1;
+    }
+
+    h4 {
+      font-size: 3rem;
+      color: $color-second;
+      font-family: "rische", serif;
+      margin-bottom: 3rem;
+      font-weight: 400;
+
+      @include respond(phone) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    h5 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      width: 60%;
+      margin-bottom: 5rem;
+
+      @include respond(phone) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+
+    strong {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .footer-item {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-anch {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: $color-grey-2;
+      font-weight: 500;
+    }
+  }
+
+  .footer-foot {
+    background-color: $color-sub-tertiary;
+    text-align: center;
+    padding-block: 2rem;
+
+    p {
+      font-size: 1.8rem;
+    }
+  }
+}
