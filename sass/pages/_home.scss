@@ -381,7 +381,11 @@
       .btn-text {
         outline: 0.2rem solid $color-secondary;
         border-radius: 1rem;
-        padding-inline: 10rem;
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
