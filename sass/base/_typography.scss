@@ -87,12 +87,16 @@
   line-height: 150%;
 }
 
-.btn-lemon {
+.btn:link,
+.btn:visited {
   text-decoration: none;
-  background-color: $color-secondary;
   color: inherit;
-  font-size: 3rem;
   font-weight: 500;
+}
+
+.btn-lemon {
+  background-color: $color-secondary;
+  font-size: 3rem;
   padding: 1.5rem 3rem;
   border-radius: 1.5rem;
 
@@ -106,21 +110,32 @@
   }
 }
 
+.btn-lemon:hover,
+.btn-lemon:active {
+  background-color: $color-hover;
+}
+
 .btn-white {
-  text-decoration: none;
   background-color: $color-white;
-  color: inherit;
   font-size: 1.8rem;
-  font-weight: 500;
   padding: 1.2rem 6rem;
   border-radius: 1.5rem;
 }
 
+.btn-white:hover,
+.btn-white:active {
+  background-color: $color-black;
+  color: $color-white;
+}
+
 .btn-text {
-  text-decoration: none;
-  color: inherit;
   font-size: 1.5rem;
-  font-weight: 500;
   padding: 1.5rem 3.5rem;
   outline: 0.1rem solid $color-black;
+}
+
+.btn-text:hover,
+.btn-text:active {
+  background-color: $color-black;
+  color: $color-white;
 }

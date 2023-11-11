@@ -386,6 +386,13 @@
         align-items: center;
         justify-content: center;
       }
+
+      .btn-text:hover,
+      .btn-text:active {
+        outline: unset;
+        background-color: $color-black;
+        color: $color-white;
+      }
     }
   }
 
